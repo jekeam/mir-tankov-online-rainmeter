@@ -18,7 +18,7 @@
 
 1. Установите Rainmeter: https://www.rainmeter.net/
 2. Откройте страницу релиза проекта на GitHub.
-3. Скачайте файл `MirTankovOnline-v1.0.0.rmskin` из блока `Assets`.
+3. Скачайте файл `MirTankovOnline-v1.0.0.rmskin` из [релиза](https://github.com/jekeam/mir-tankov-online-rainmeter/releases) блока `Assets`.
 4. Дважды кликните по скачанному `.rmskin` файлу.
 5. В окне Rainmeter Skin Installer нажмите `Install`.
 6. Виджет появится на рабочем столе.
