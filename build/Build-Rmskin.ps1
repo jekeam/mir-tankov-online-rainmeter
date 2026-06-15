@@ -22,6 +22,7 @@ New-Item -ItemType Directory -Force -Path $dist | Out-Null
 
 Copy-Item -LiteralPath (Join-Path $root "RainmeterSkin\$skinName\MirTankovOnline.ini") -Destination (Join-Path $stage "Skins\$skinName\MirTankovOnline.ini") -Force
 Copy-Item -LiteralPath (Join-Path $root "RainmeterSkin\$skinName\Fetch-MirTankovOnline.ps1") -Destination (Join-Path $stage "Skins\$skinName\Fetch-MirTankovOnline.ps1") -Force
+Copy-Item -LiteralPath (Join-Path $root "RainmeterSkin\$skinName\ManualRefresh.vbs") -Destination (Join-Path $stage "Skins\$skinName\ManualRefresh.vbs") -Force
 Copy-Item -LiteralPath (Join-Path $root "RainmeterSkin\$skinName\@Resources") -Destination (Join-Path $stage "Skins\$skinName\@Resources") -Recurse -Force
 
 $manifest = @"
