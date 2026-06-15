@@ -1,11 +1,11 @@
-param(
+﻿param(
     [string]$Version = '1.0.0'
 )
 
 $ErrorActionPreference = 'Stop'
 
 $root = Split-Path -Parent $PSScriptRoot
-$skinName = 'KttcOnline'
+$skinName = 'MirTankovOnline'
 $packageName = "MirTankovOnline-v$Version"
 $buildRoot = Join-Path $root '.build'
 $stage = Join-Path $buildRoot $packageName
@@ -20,8 +20,8 @@ if (Test-Path -LiteralPath $stage) {
 New-Item -ItemType Directory -Force -Path (Join-Path $stage "Skins\$skinName") | Out-Null
 New-Item -ItemType Directory -Force -Path $dist | Out-Null
 
-Copy-Item -LiteralPath (Join-Path $root "RainmeterSkin\$skinName\KttcOnline.ini") -Destination (Join-Path $stage "Skins\$skinName\KttcOnline.ini") -Force
-Copy-Item -LiteralPath (Join-Path $root "RainmeterSkin\$skinName\Fetch-KttcOnline.ps1") -Destination (Join-Path $stage "Skins\$skinName\Fetch-KttcOnline.ps1") -Force
+Copy-Item -LiteralPath (Join-Path $root "RainmeterSkin\$skinName\MirTankovOnline.ini") -Destination (Join-Path $stage "Skins\$skinName\MirTankovOnline.ini") -Force
+Copy-Item -LiteralPath (Join-Path $root "RainmeterSkin\$skinName\Fetch-MirTankovOnline.ps1") -Destination (Join-Path $stage "Skins\$skinName\Fetch-MirTankovOnline.ps1") -Force
 Copy-Item -LiteralPath (Join-Path $root "RainmeterSkin\$skinName\@Resources") -Destination (Join-Path $stage "Skins\$skinName\@Resources") -Recurse -Force
 
 $manifest = @"
@@ -32,7 +32,7 @@ Version=$Version
 MinimumRainmeter=4.5
 MinimumWindows=10.0
 LoadType=Skin
-Load=$skinName\KttcOnline.ini
+Load=$skinName\MirTankovOnline.ini
 MergeSkins=1
 "@
 
@@ -50,3 +50,4 @@ Compress-Archive -Path (Join-Path $stage '*') -DestinationPath $zip -Force
 Move-Item -LiteralPath $zip -Destination $rmskin -Force
 
 Write-Output $rmskin
+

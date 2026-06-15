@@ -1,4 +1,4 @@
-# Мир Танков - Онлайн для Rainmeter
+﻿# Мир Танков - Онлайн для Rainmeter
 
 Небольшой виджет Rainmeter для Windows 10/11. Показывает онлайн серверов «Мир Танков» с сайта kttc.ru, сортирует серверы от большего онлайна к меньшему и обновляет данные раз в 15 минут.
 
@@ -27,8 +27,8 @@
 
 1. Нажмите правой кнопкой по иконке Rainmeter в трее.
 2. Откройте `Manage`.
-3. Найдите `KttcOnline`.
-4. Выберите `KttcOnline.ini`.
+3. Найдите `MirTankovOnline`.
+4. Выберите `MirTankovOnline.ini`.
 5. Нажмите `Load`.
 
 ## Обновление данных
@@ -54,8 +54,8 @@ powershell -ExecutionPolicy Bypass -File .\build\Build-Rmskin.ps1
 ## Структура проекта
 
 ```text
-RainmeterSkin/KttcOnline/        исходники скина
-RainmeterSkin/KttcOnline/@Resources/Data.inc
+RainmeterSkin/MirTankovOnline/        исходники скина
+RainmeterSkin/MirTankovOnline/@Resources/Data.inc
 build/Build-Rmskin.ps1           сборка .rmskin пакета
 docs/images/preview.png          пример виджета
 dist/                            готовые сборки
@@ -64,3 +64,4 @@ dist/                            готовые сборки
 ## Источник данных
 
 Данные берутся с сайта kttc.ru. Проект не связан с kttc.ru и не является официальным виджетом.
+
